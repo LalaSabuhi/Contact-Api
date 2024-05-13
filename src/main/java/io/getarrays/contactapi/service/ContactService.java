@@ -46,7 +46,7 @@ public class ContactService {
         //Assigment
     }
 
-    public String upload (String id, MultipartFile file){
+    public String uploadPhoto (String id, MultipartFile file){
         log.info("saving picture for user ID: {}", id);
         Contact contact = getContact(id);
         String photoUrl =photoFunction.apply(id, file);
@@ -76,6 +76,9 @@ public class ContactService {
             throw new RuntimeException("unable to save photo");
         }
     };
+
+
+
 
 
 }
